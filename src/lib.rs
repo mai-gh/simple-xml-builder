@@ -154,7 +154,7 @@ impl XMLElement {
 
     /// Sometimes you simply do not want to include the XML declaration. :-P
     pub fn write_without_xml_declaration<W: Write>(&self, mut writer: W) -> io::Result<()> {
-        self.write_level(&mut writer, 0);
+        self.write_level(&mut writer, 0)
     }
 
     fn write_level<W: Write>(&self, writer: &mut W, level: usize) -> io::Result<()> {
